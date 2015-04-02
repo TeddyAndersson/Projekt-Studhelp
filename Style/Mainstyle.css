@@ -4,6 +4,7 @@
 
 body {
     font-family: serif;   
+    background-color: #fcfcfc;
 }
 
 a:-webkit-any-link{
@@ -46,7 +47,7 @@ header > nav > ul > li > a:hover {
 
 /* ------- Markerar det ämne som användaren är inne på ------- */
 
-header > nav > ul > li > a.selected {
+header > nav > ul > li > a#selected {
     color: orangered;
 }
 
@@ -90,7 +91,7 @@ section > .informationContainer {
     text-align: center;
 }
 
-/*---------------- SECTION FRANTPAGE INFORMATION ENDS -------------------*/
+/*---------------- SECTION FRONTPAGE INFORMATION ENDS -------------------*/
 
 
 section > .subject-container {
