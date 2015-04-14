@@ -1,0 +1,40 @@
+table, td, th {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+section > table {
+    width: 99.2%;
+    text-align: left;
+    background-color: #fff;
+    font-family: Constantia;
+	margin: auto;
+}
+
+section > table > thead {
+    font-size: 32px;
+    color: #fff;
+    background-color: #000;
+    border-top: 5px solid #FFB700;
+}
+
+section > table > thead > tr > th {
+    padding: 0.2em 0.5em;
+}
+
+section > table > tbody > tr > td {
+    padding: 0.5em 2em;
+}
+
+section > table > tbody > tr > td > a{
+    font-size: 28px;
+    text-decoration: underline !important;
+}
+
+section > table > tbody > tr > td > a:hover {
+    color: #777777;
+}
+
+section > table > tbody > tr > td > p {
+    padding: 0.5em 0;
+    font-size: 14px;
+}

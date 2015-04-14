@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: Constantia;
+	font-size: 17px;
+	background-color: #F6F6F6;
+}
+
+a:-webkit-any-link{
+    text-decoration:none;
+    color: #000;
+}
+
+/*--------------------- HEADER STYLE --------------------*/
+
+header {
+    width: 100%;
+    background-color: bisque;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+    height: 50px;
+}
+
+header > nav {
+    margin-right: 3em;
+}
+
+header > nav > ul {
+    float:right;
+	list-style: none;
+}
+
+header > nav > ul > li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 0.2em;
+	position: relative;
+}
+
+header > nav > ul > li:hover {
+	background-color: #C2F0FF;
+}
+
+header > nav > ul > li > a {
+    display: block;
+    line-height: 50px; 
+    font-size: 20px;
+	padding: 0 1em;
+}
+
+header > nav > ul > li > a:hover {
+    color: dimgray;
+}
+
+header > nav > ul > li > ul{
+	display: none;
+	background-color: #C2F0FF;  
+	padding: 0;
+	top: 48px;
+	position: absolute;
+	visibility: hidden;
+}
+
+header > nav > ul > li > ul > li{
+	background-color: #C2F0FF;
+	display: block;
+	padding: 0.8em 0;
+}
+
+header > nav > ul > li > ul > li > a{
+	font-size: 18px;
+	padding: 0.8em;
+}
+
+header > nav > ul > li > ul > li > a:hover {
+	color: dimgray;
+}
+
+header > nav > ul > li > ul > li:hover{
+	background-color: #DAF6FF;
+}
+
+header > nav > ul > li:hover > ul{
+	display: block;
+	visibility: visible;
+}
+
+/* ------- Markerar det ämne som användaren är inne på ------- */
+
+header > nav > ul > li.selected {
+    background-color: #C2F0FF;
+}
+
+header > nav > ul > li > a.selected {
+    color: dimgray;
+}
+
+/* ---------- HEADER LOGO ----------*/
+
+header > nav > #logo {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    width: 5em;
+    margin-left: 1em;
+    font-size: 40px
+}
+
+header > nav > #logo > a:hover {
+    color: darkgrey;
+}
+
+/* ------------------ HEADER STYLE ENDS ------------------ */
+
+
+/*-------------------- SECTION STYLE STARTS ------------------*/
+
+
+section {
+    width: 1024px;
+    margin: 0 auto;
+    margin-top: 2em;
+    padding-top: 4em;
+}
+
+/*---------------- SECTION FRONTPAGE INFORMATION STYLE STARTS ----------------*/
+
+section > .informationContainer {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+}
+
+section > .informationContainer > h2{
+	font-size: 30px;
+}
+
+section > .informationContainer > p{
+	font-size: 18px;
+}
+
+/*---------------- SECTION FRONTPAGE INFORMATION ENDS -------------------*/
+
+
+section > .subject-container {
+    background-color: #C2F0FF;
+    min-height: 380px;
+	border-radius: 10px;
+}
+
+section > .subject-container > .subjectBox {
+    background-color: #fff;
+    width: 30%;
+    float: left;
+    margin: 0.93em;
+	height: 155px;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-radius: 10px;
+	box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+}
+
+section > .subject-container > .subjectBox > h2{
+    background-color:#000;
+    font-size: 30px;
+    text-align: center;
+    color: #ececec;
+	border-radius: 7px;
+	border-top: 2px solid #FFB700;
+}
+
+section > .subject-container > .subjectBox > h2 > a{
+    background-color:#000;
+    font-size: 30px;
+    text-align: center;
+    color: #ececec;
+	padding: 0 4.5em;
+	border-radius: 7px;
+}
+
+section > .subject-container > .subjectBox > .borderSurround {
+    padding: 0.5em 0;
+}
+
+section > .subject-container > .subjectBox > .borderSurround > ul{
+	list-style: none;
+}
+
+section > .subject-container > .subjectBox > .borderSurround > ul > li:before{
+	content: "\2023";
+}
