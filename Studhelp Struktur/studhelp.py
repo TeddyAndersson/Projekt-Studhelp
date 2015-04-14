@@ -7,7 +7,7 @@ from os import listdir
 import os
 # Static Routes
 @route('/static/<filename>')
-def send_static(filename):
+def get_static(filename):
     "Hanterar css filen"
     return static_file(filename, root='./static/')
 
@@ -16,6 +16,17 @@ def index():
     ''' Kör index templaten som visar första sidan '''
     return template('index')
 
+@route('/update_thread/', method="POST")
+def update_article():
+    '''Hämtar fomrulär data som skrevs in i routen /edit/ för att sedan öppna mappen '.../Wiki/' och spara innehållet i en text fil. '''
+    header = request.forms.header
+    question = request.forms.question
+    
+    "Att göra: skriva header till mapp namn ( hur får vi den in i rätt underkategori ?)  för tråd och question som en 
+    f = open('subjects/' + name + '.txt', 'w')
+    f.write(text)
+    f.close
+    return template('edit_result', header=header, question=question)
 
 
 
