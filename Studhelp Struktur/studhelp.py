@@ -5,7 +5,9 @@
 from bottle import route, run, template, request, static_file
 from os import listdir
 import os
+import mysql.connector
 # Static Routes
+
 @route('/static/<filename>')
 def get_static(filename):
     "Hanterar css filen"
@@ -16,14 +18,14 @@ def index():
     ''' Kör index templaten som visar första sidan '''
     return template('index')
 
-@route('/update_thread/', method="POST")
-def update_article():
-    '''Hämtar fomrulär data som skrevs in i routen /edit/ för att sedan öppna mappen '.../Wiki/' och spara innehållet i en text fil. '''
+@route('/update_subkat/', method="POST")
+def update_thread():
+    '''Hämtar fomrulär data som skrevs in i routen /new_thread/ för att sedan öppna mappen '.../Wiki/' och spara innehållet i en text fil. '''
     header = request.forms.header
     question = request.forms.question
     
-    "Att göra: skriva header till mapp namn ( hur får vi den in i rätt underkategori ?)  för tråd och question som en 
-    f = open('subjects/' + name + '.txt', 'w')
+    "Att göra: skriva header till mapp namn ( hur får vi den in i rätt underkategori ?)  för tråd och question som en "
+    f = open('subjects/IT/Datavetenskap' + name + '.txt', 'w')
     f.write(text)
     f.close
     return template('edit_result', header=header, question=question)
@@ -43,7 +45,7 @@ def list_articles():
  
 @route('/Wiki/<pagename>/')
 def show_article(pagename):
-    """Visar en artikel som laddas från en text fil i mappen '.../Wiki/'."""
+    '''Visar en artikel som laddas från en text fil i mappen '.../Wiki/'.'''
     
     f = open('Wiki/' + pagename + '.txt', 'r')
     article = f.read()
@@ -84,5 +86,5 @@ def remove_article():
     return template('remove_update', filename=filename)
 
 
-    
+python --version 
 run(host='localhost', port=8080, debug=True, reloader=True)
