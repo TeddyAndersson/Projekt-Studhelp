@@ -1,0 +1,72 @@
+create table kategori (Namn varchar(100) primary key, Beskrivning varchar(1000)
+)
+
+create table underkategori (Namn varchar(100) primary key,
+Beskrivning varchar(1000),
+Kategorinamn varchar(100),
+foreign key (Kategorinamn) references kategori(Namn)
+)
+
+create table trådar (ID int auto_increment primary key,
+Namn varchar(100),
+Beskrivning varchar(1000),
+UnderkategoriNamn varchar(100),
+Kategorinamn varchar(100),
+foreign key (Kategorinamn) references kategori(Namn),
+FOREIGN KEY (UnderkategoriNamn) references underkategori(Namn)
+)
+
+insert into kategori (Namn, Beskrivning)
+Values
+('Programmering', 'Programmerings beskrivning'), 
+('Webbutveckling', 'Webbutveckling beskrivning'),
+('Teori', 'Teori beskrivning'),
+('Spelutveckling', 'Spelutveckling beskrivning'),
+('Övrigt', 'Övrigt beskrivning')
+
+insert into underkategori (Namn, Beskrivning, Kategorinamn)
+Values
+('Java', 'Java beskrivning','Programmering'), 
+('Python', 'Python beskrivning', 'Programmering'),
+('SQL', 'SQL beskrivning', 'Programmering'),
+('C++', 'C++ beskrivning', 'Programmering'),
+('PHP', 'PHP beskrivning', 'Programmering'),
+('HTML', 'HTML beskrivning', 'Webbutveckling'),
+('CSS', 'CSS beskrivning', 'Webbutveckling'),
+('JavaScript', 'JavaScript beskrivning', 'Webbutveckling'),
+('Interaktionsdesign', 'ID beskrivning', 'Teori'),
+('Informationsarkitektur', 'IA beskrivning', 'Teori'),
+('Datavetenskap', 'DV beskrivning', 'Teori'),
+('Informationssäkerhet', 'IS beskrivning', 'Teori'),
+('Användbarhet', 'Användbarhet beskrivning', 'Teori'),
+('Datastruktur och Algoritmer', 'D&A beskrivning', 'Teori'),
+('Speldesign', 'Speldesign beskrivning', 'Spelutveckling'),
+('Datorgrafik', 'Datorgrafik beskrivning', 'Spelutveckling'),
+('Modellering', 'Modellering beskrivning', 'Spelutveckling'),
+('Uppsatser', 'Uppsatser beskrivning', 'Övrigt'),
+('Tentafrågor', 'Tentafrågor beskrivning', 'Övrigt')
+
+create table användare (Namn varchar(50) primary key,
+lösenord varchar(50)
+)
+
+create table inlägg (ID int auto_increment primary key, 
+Beskrivning varchar(1000), 
+Datum DATETIME, 
+TrådID int, 
+Användare varchar(50),
+foreign key (TrådID) references trådar(ID),
+foreign key (Användare) references användare(Namn)
+)
+
+
+alter table trådar
+Add constraint AnvändarNamn foreign key (AnvändarNamn) references användare(Namn)
+
+alter table inlägg
+add AnvändarNamn varchar(50)
+foreign key (AnvändarNamn) references användare(AnvändarNamn)
+
+alter table trådar
+Add constraint AnvändarNamn foreign key (Användare) references användare(Namn)
+

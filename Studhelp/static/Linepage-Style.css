@@ -1,0 +1,248 @@
+section > .line-container {
+    background-color: #F6F6F6;
+    width:1026px;
+}
+
+section > .line-container > .lineBox {
+    background-color: #fff;
+    width: 100%;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-top: 3px solid #FFB700;
+}
+
+section > .line-container > .lineBox > h2{
+    background-color:#000;
+    font-size: 32px;
+    padding: 0.2em 0.5em;
+    color: #ececec;
+}
+
+section > .line-container > .lineBox > h2 > .createdBy{
+	float: right;
+	font-size: 24px;
+	padding-top: 0.2em;
+}
+
+section > .line-container > .lineBox > .borderSurround {
+    padding: 1em 0.8em;
+}
+
+section > .line-container > .lineBox > .borderSurround > p{
+	padding: 0.5em 0;
+}
+
+section > .line-container > .answerBoxleft {
+    background-color: #fff;
+    width: 200px;
+    float: left;
+	height: 170px;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	background-color: #ececec;
+}
+
+section > .line-container > .answerBoxleft > h3{
+	font-size: 18px;
+	padding: 0.5em 0.8em;
+	text-decoration: underline;
+}
+
+section > .line-container > .answerBoxleft > .borderSurround {
+    padding: 0 0.8em;
+}
+
+section > .line-container > .answerBoxright {
+    background-color: #fff;
+    width: 821px;
+    float: right;
+	height: 170px;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+section > .line-container > .answerBoxright > .borderSurround {
+    padding: 0.5em 0.8em;
+}
+
+section > .writeComment {
+	background-color: #fff;
+    width: 1024px;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	padding: 0.5em 0.8em;
+    margin: 3em 0;
+}
+
+section > .writeComment > form > textarea{
+	margin: 0.8em 0;
+	font-family: Constantia;
+	font-size: 17px;
+}
+
+section > .line-container > .writeComment > form > #button{
+	height: 130px;
+	width: 179px;
+	float: right;
+	margin: 0.7em 1em 0 0;
+	font-family: Constantia;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+section > .line-container > .newLine {
+	background-color: #fff;
+    width: 995px;
+	height: 230px;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	padding: 0.5em 0.8em;
+}
+
+section > .line-container > .newLine > form > #lineName{
+	margin: 0.2em 0 0.8em;
+	font-family: Constantia;
+	font-size: 17px;
+}
+
+section > .line-container > .newLine > form > p > textarea{
+	margin: 0.8em 0;
+	font-family: Constantia;
+	font-size: 17px;
+}
+
+section > .line-container > .newLine > form > p > #button{
+	height: 130px;
+	width: 179px;
+	float: right;
+	margin: 0.7em 1em 0 0;
+	font-family: Constantia;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+section > .line-container > .newmemberHead {
+    background-color: #fff;
+    width: 728px;
+	margin: auto;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-top: 3px solid #FFB700;
+}
+
+section > .line-container > .newmemberHead > h2{
+    background-color:#000;
+    font-size: 32px;
+    padding: 0.2em 0.5em;
+    color: #ececec;
+}
+
+section > .line-container > .newMember{
+	background-color: #fff;
+    width: 700px;
+	height: 250px;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	padding: 0.5em 0.8em;
+	font-weight: bold;
+	font-size: 18px;
+	margin:auto;
+}
+
+section > .line-container > .newMember > form {
+    margin: 0;
+    padding: 0;
+}
+
+section > .line-container > .newMember > form > label {
+  display: block;
+  font-weight: bold;
+  text-align: right;
+  width: 300px;
+  float: left;
+  color: #FFB700;
+    margin-right: 0.5em;
+    
+}
+
+section > .line-container > .newMember > form > input {
+  float: left;
+  font-size: 12px;
+  padding: 4px 2px;
+  border: solid 1px #aacfe4;
+  width: 20%;
+    margin-bottom: 0.5em;
+  margin: 2px 0 20px 10px;
+}
+
+section > .line-container > .newMember > form > label.btn_fix {
+    min-height: 22px;
+    width: 300px;
+}
+section > .line-container > .newMember > form > input.submit_btn {
+    
+}
+section > .line-container > .loginOuter {
+	background-color: #fff;
+    width: 700px;
+	height: 220px;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	padding: 0.5em 0.8em;
+	font-weight: bold;
+	font-size: 18px;
+	margin:auto;
+}
+
+
+section > .line-container > .loginOuter > .loginBox{
+	width: 180px;
+	float: left;
+	margin: 2em 0 0 12em;
+}
+
+section > .line-container > .loginOuter > .loginBox > form > input{
+	width: 250px;
+	height: 30px;
+	border-radius: 3px;
+	font-family: Constantia;
+	font-size: 17px;
+	text-align: center;
+}
+
+section > .line-container > .loginOuter > .loginBox > form > p{
+	line-height: 2.7em;
+}
+
+section > .line-container > .loginOuter > .loginBox > form > p > input{
+	width: 250px;
+	height: 30px;
+	border-radius: 3px;
+	font-family: Constantia;
+	font-size: 17px;
+	text-align: center;
+}
+
+section > .line-container > .loginOuter > .loginBox > form > p > #login{
+	width: 254px;
+	height: 30px;
+	font-family: Constantia;
+	font-weight: bold;
+	color: #333333;
+	background-color: #C2F0FF;
+	border: 1px solid #C2F0FF;
+	border-radius: 3px;
+	box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+}
+
+section > .line-container > .loginOuter > .loginBox > form > p > #login:hover{
+	background-color: #AFD8E6;
+	border: 1px solid #AFD8E6;
+}

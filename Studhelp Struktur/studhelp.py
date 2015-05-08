@@ -49,7 +49,7 @@ def show_article(pagename):
     
     f = open('Wiki/' + pagename + '.txt', 'r')
     article = f.read()
-    return template('show_article', article=article, pagename=pagename )
+    return template('show_article', article=article, pagename=pagename)
     
  
 @route('/edit/')

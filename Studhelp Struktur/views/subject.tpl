@@ -22,7 +22,7 @@
         <nav>
             <div id="logo"><a href="/">STUDHELP</a></div>
             
-           <ul>
+          <ul>
                 <li><a href="/IT">IT</a>
 					<ul>
 						<li><a href="/IT/Datavetenskap">Datavetenskap</a></li>
@@ -33,39 +33,41 @@
                 <li><a href="/Matematik">Matematik</a>
 					<ul>
 						<li><a href="/Matematik/Formler">Formler</a></li>
-						<li><a href="/Matematik/Linjär algebra">Linjär algebra</a></li>
+						<li><a href="/Matematik/Linjar_algebra">Linjär algebra</a></li>
 						<li><a href="/Matematik/Endimensionell Matematik">Endimensionell Matematik</a></li>
 						<li><a href="/Matematik/Flerdimensionell Matematik">Flerdimensionell Matematik</a></li>
 					</ul>
 				</li>
                 <li><a href=/Ekonomi>Ekonomi</a>
 					<ul>
-						<li><a href=#Objekt>Marknadsföring</a></li>
-						<li><a href=#Objekt>Ekonomistyrning</a></li>
-						<li><a href=#Objekt>Bokföring/Bokslut</a></li>
-						<li><a href=#Objekt>Organisation & ledarskap</a></li>
+						<li><a href="/Ekonomi/Marknadsföring">Marknadsföring</a></li>
+						<li><a href="/Ekonomi/Ekonomistyrning">Ekonomistyrning</a></li>
+						<li><a href="/Ekonomi/Bokförning&Bokslut ">Bokföring/Bokslut</a></li>
+						<li><a href="/Ekonomi/Organisation&Ledarskap">Organisation & ledarskap</a></li>
 					</ul>
 				</li>
                 <li><a href=/Fysik>Fysik</a>
 					<ul>
-						<li><a href=#Objekt>Lagar & Formler</a></li>
+						<li><a href="/Fysik/Lagar">Lagar</a></li>
+						<li><a href="/Fysik/Formler">Formler</a></li>
+                        
 					</ul>
 				</li>
                 <li><a href=/Bygg>Bygg</a>
 					<ul>
-						<li><a href=#Objekt>Konstruktion</a></li>
-						<li><a href=#Objekt>Arkitektur</a></li>
+						<li><a href="/Bygg/Konstruktion">Konstruktion</a></li>
+						<li><a href="/Bygg/Arkitektur">Arkitektur</a></li>
 					</ul>
 				</li>
                 <li><a href=/Ovrigt>Övrigt</a>
 					<ul>
-						<li><a href=#Objekt>Uppsatser</a></li>
-						<li><a href=#Objekt>Tentafrågor</a></li>
+						<li><a href="/Ovrigt/Uppsatser">Uppsatser</a></li>
+						<li><a href="/Ovrigt/Tentafrågor">Tentafrågor</a></li>
 					</ul>
 				</li>
                 <li><a href=#Objekt>Bli medlem</a></li>
                 <li><a href=#Objekt>Login</a></li>
-            </ul>  
+            </ul> 
         </nav>
       
     </header>

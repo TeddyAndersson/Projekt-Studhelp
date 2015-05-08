@@ -1,0 +1,5 @@
+create table underkategori (Namn varchar(100) primary key, 
+Beskrivning varchar(1000),
+Kategorinamn varchar(100),
+foreign key (Kategorinamn) references kategori(Namn)
+)

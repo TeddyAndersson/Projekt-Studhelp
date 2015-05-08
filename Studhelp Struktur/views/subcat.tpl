@@ -23,7 +23,7 @@
         <nav>
             <div id="logo"><a href="index.html">STUDHELP</a></div>
             
-            <ul>
+           <ul>
                 <li><a href="/IT">IT</a>
 					<ul>
 						<li><a href="/IT/Datavetenskap">Datavetenskap</a></li>
@@ -34,39 +34,41 @@
                 <li><a href="/Matematik">Matematik</a>
 					<ul>
 						<li><a href="/Matematik/Formler">Formler</a></li>
-						<li><a href="/Matematik/Linjär algebra">Linjär algebra</a></li>
+						<li><a href="/Matematik/Linjar_algebra">Linjär algebra</a></li>
 						<li><a href="/Matematik/Endimensionell Matematik">Endimensionell Matematik</a></li>
 						<li><a href="/Matematik/Flerdimensionell Matematik">Flerdimensionell Matematik</a></li>
 					</ul>
 				</li>
                 <li><a href=/Ekonomi>Ekonomi</a>
 					<ul>
-						<li><a href=#Objekt>Marknadsföring</a></li>
-						<li><a href=#Objekt>Ekonomistyrning</a></li>
-						<li><a href=#Objekt>Bokföring/Bokslut</a></li>
-						<li><a href=#Objekt>Organisation & ledarskap</a></li>
+						<li><a href="/Ekonomi/Marknadsföring">Marknadsföring</a></li>
+						<li><a href="/Ekonomi/Ekonomistyrning">Ekonomistyrning</a></li>
+						<li><a href="/Ekonomi/Bokförning&Bokslut ">Bokföring/Bokslut</a></li>
+						<li><a href="/Ekonomi/Organisation&Ledarskap">Organisation & ledarskap</a></li>
 					</ul>
 				</li>
                 <li><a href=/Fysik>Fysik</a>
 					<ul>
-						<li><a href=#Objekt>Lagar & Formler</a></li>
+						<li><a href="/Fysik/Lagar">Lagar</a></li>
+						<li><a href="/Fysik/Formler">Formler</a></li>
+                        
 					</ul>
 				</li>
                 <li><a href=/Bygg>Bygg</a>
 					<ul>
-						<li><a href=#Objekt>Konstruktion</a></li>
-						<li><a href=#Objekt>Arkitektur</a></li>
+						<li><a href="/Bygg/Konstruktion">Konstruktion</a></li>
+						<li><a href="/Bygg/Arkitektur">Arkitektur</a></li>
 					</ul>
 				</li>
                 <li><a href=/Ovrigt>Övrigt</a>
 					<ul>
-						<li><a href=#Objekt>Uppsatser</a></li>
-						<li><a href=#Objekt>Tentafrågor</a></li>
+						<li><a href="/Ovrigt/Uppsatser">Uppsatser</a></li>
+						<li><a href="/Ovrigt/Tentafrågor">Tentafrågor</a></li>
 					</ul>
 				</li>
                 <li><a href=#Objekt>Bli medlem</a></li>
                 <li><a href=#Objekt>Login</a></li>
-            </ul>  
+            </ul> 
         </nav>
       
     </header>
@@ -85,7 +87,7 @@
                 % end
         
         </div>
-        <form action="/update/" method="post">
+        <form action="/IT/Datavetenskap/Skapa-Ny" method="post">
             <input type="text" id="thread_header">
             <textarea rows="6" cols="95" id="thread_question" >Skriv din fråga!</textarea>
             <input type="submit" value="Continue &rarr;">
@@ -102,34 +104,16 @@
             </thead>
                     
             <tbody>
-                %for header in thread_header        
+                %for name in thread:
                 <tr>
                     <td>
-                        <a href="/IT/Datavetenskap/">{{thread_header}}</a>
+                        <a href="/IT/Datavetenskap/{{name}}">{{name}}</a>
                         
                         <p>Skapad av: StudHelp</p> 
 						<p>Antal inlägg:</p>
                     </td>
                 </tr>
                 %end
-
-                <tr>
-                    <td>
-                        <a href="#tråd">Trådnamn</a>
-                        
-                        <p>Skapad av:</p>
-						<p>Antal inlägg:</p>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <a href="#tråd">Trådnamn</a>
-                        
-                        <p>Skapad av:</p>
-						<p>Antal inlägg:</p>
-                    </td>
-                </tr>
                     
             </tbody> 
                     

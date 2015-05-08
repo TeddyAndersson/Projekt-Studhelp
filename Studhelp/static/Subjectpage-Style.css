@@ -1,0 +1,87 @@
+table, td, th {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+section > table {
+    width: 100%;
+    text-align: left;
+    background-color: #fff;
+    font-family: Constantia;
+	margin: auto;
+}
+
+section > table > thead {
+    color: #fff;
+    background-color: #000;
+    border-top: 5px solid #FFB700;
+}
+
+section > table > thead > tr > th {
+    padding: 0.2em 0.5em;
+}
+
+section > table > tbody > td{
+    margin:0;
+    padding: 1px;
+}
+
+section > table > tbody > tr > td > a{
+    text-decoration: underline !important;
+}
+
+section > table > tbody > tr > td > a:hover {
+    color: #777777;
+}
+
+section > table > tbody > tr > td > p {
+    padding: 0.5em 0;
+    
+}
+
+section > table  > thead > tr > th > .createNew{
+	float: right;
+	font-size: 26px;
+	padding-top: 0.13em;
+	color: #fff;
+}
+
+section > table  > thead > tr > th > .createNew:hover{
+	color: #CCCCCC;
+}
+
+section > table  > thead > tr > th > p.created{
+    float: left;
+    font-size: 0.6em;
+}
+
+section > table > tbody > tr > td.user {
+    width: 20%;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 2em;
+    
+    
+} 
+
+section > table > tbody > tr > td.content {
+    width: 80%;
+    font-family: Arial;
+    font-size: 0.3em;
+}
+section > table > tbody > tr > td.threadQ {
+    font-size: 2em;
+    font-weight: bold;
+    padding: 0.5em;
+}
+
+section > table > tbody > tr > th.posts {
+    background-color: #000;
+    padding-left: 3em;
+    color: #fff;
+    padding: 0.5em 2em;
+}
+
+section > .answerbox {
+    margin: 0 auto;
+    margin-top: 1em;
+}

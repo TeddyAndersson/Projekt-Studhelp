@@ -16,12 +16,17 @@ sys.setdefaultencoding('UTF8')
 
 d_sub = {'IT':'beskrivning','Matematik':'beskrivning','Fysik':'beskrivning', 'Bygg':'beskrivning', 'Ekonomi':'beskrivning', 'Ovrigt':'beskrivning'}
 IT = {'Datavetenskap':'beskrivning', 'Programmering':'beskrivning', 'Spelutveckling':'beskrivning'}
-Matematik = {'Test1':'beskrivning', 'Programmering':'beskrivning', 'Spelutveckling':'beskrivning'}
+Matematik = {'Formler':'beskrivning', 'Linjar Algebra':'beskrivning', 'Endimensionell Analys':'beskrivning'}
 Bygg = {'Test2':'beskrivning', 'Programmering':'beskrivning', 'Spelutveckling':'beskrivning'}
 Ekonomi = {'Test3':'beskrivning', 'Programmering':'beskrivning', 'Spelutveckling':'beskrivning'}
 Fysik = {'Test4':'beskrivning', 'Programmering':'beskrivning', 'Spelutveckling':'beskrivning'}
 Ovrigt = {'Test5':'beskrivning', 'Programmering':'beskrivning', 'Spelutveckling':'beskrivning'}
-Thread_DaVe = {'Header':['question', 'user']}
+Datavetenskap = {'Header1':['question1', 'user1'], 'Header2':['question2', 'user2'], 'Header3':['question3', 'user3']}
+Programmering = {'Header1':['question1', 'user1'], 'Header2':['question2', 'user2'], 'Header3':['question3', 'user3']}
+Spelutveckling = {'Header1':['question1', 'user1'], 'Header2':['question2', 'user2'], 'Header3':['question3', 'user3']}
+M_Formler = {'Header1':['question1', 'user1'], 'Header2':['question2', 'user2'], 'Header3':['question3', 'user3']}
+LinAlg = {'Header1':['question1', 'user1'], 'Header2':['question2', 'user2'], 'Header3':['question3', 'user3']}
+Endim = {'Header1':['question1', 'user1'], 'Header2':['question2', 'user2'], 'Header3':['question3', 'user3']}
 
 '''def get():
     "Hämtar databasvärderna och sätter in dem i ett lexikon"
@@ -68,30 +73,67 @@ def category(pagename):
 
 @route('/IT/<pagename>')
 def list_subcategory(pagename):
+    "Genererar Templaten för underkategorier inom ämnet IT"
+    "Anropar formulär datan från sidan för att skapa en ny tråd"
     key = pagename
     fel = None
+    
     if key == 'Datavetenskap':
         value = IT.get(key, None)
-        return template('subcat', header=key, content=value)
+        thread = Datavetenskap.keys()
+        thread.sort()
+        return template('subcat', header=key, content=value, thread=thread)
     if key == 'Programmering':
         value = IT.get(key, None)
-        return template('subcat', header=key, content=value)
-    if key == 'Spelutvecklnig':
+        thread = Programmering.keys()
+        thread.sort()
+        return template('subcat', header=key, content=value, thread=thread)
+    if key == 'Spelutveckling':
         value = IT.get(key, None)
-        return template('subcat', header=key, content=value)
+        thread = Spelutveckling.keys()
+        thread.sort()
+        return template('subcat', header=key, content=value, thread=thread)
+
+@route('/Matematik/<pagename>')
+def list_subcategory(pagename):
+    "Genererar Templaten för underkategorier inom ämnet: Matematik"
+    "Anropar formulär datan från sidan för att skapa en ny tråd"
+    key = pagename
+    fel = None
+    
+    if key == 'Formler':
+        value = Matematik.get(key, None)
+        thread = M_Formler.keys()
+        thread.sort()
+        return template('subcat', header=key, content=value, thread=thread)
+    
+    if key == 'Linjar_algebra':
+        value = Matematik.get(key, None)
+        thread = LinAlg.keys()
+        thread.sort()
+        return template('subcat', header=key, content=value, thread=thread)
+    
+    if key == 'Endimensionell_Matematik':
+        value = Matematik.get(key, None)
+        thread = Endim.keys()
+        thread.sort()
+        return template('subcat', header=key, content=value, thread=thread)
+    if key == 'Flerdimensionell_Matematik':
+        value = Matematik.get(key, None)
+        thread = Endim.keys()
+        thread.sort()
+        return template('subcat', header=key, content=value, thread=thread)
         
-@route('/update/', method="POST")
-def update():
-    '''To-do lägg till en user input i formet'''
-    thread_header = request.forms.name
+@route('/IT/Datavetenskap/Skapa-Ny', method="POST")
+def update(pagename):
+    thread_header = request.forms.nam
     question = request.forms.text
-    user = none
-    Thread_DaVe.update({thread_header:[question, user]})
-    return template('thread', thread_header=thread_header)       
+    Thread_DaVe.update({thread_header:[question, None]})
+    return None     
 
-@route('/IT/Datavetenskap/<pagename>')
-def thread()
-
+#@route('/IT/Datavetenskap/<pagename>')
+#def thread():
+    
 
 #get()
 
